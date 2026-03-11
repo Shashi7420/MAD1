@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+</head>
+<body>
+
+<h2>Placement Portal Login</h2>
+
+<form action="/login" method="post">
+
+Email/Username<br>
+<input type="text" name="email"><br><br>
+
+Password<br>
+<input type="password" name="password"><br><br>
+
+Role<br>
+<select name="role">
+<option value="admin">Admin</option>
+<option value="student">Student</option>
+<option value="company">Company</option>
+</select><br><br>
+
+<button type="submit">Login</button>
+
+</form>
+
+<a href="/student_register">Student Register</a><br>
+<a href="/company_register">Company Register</a>
+
+</body>
+</html>
