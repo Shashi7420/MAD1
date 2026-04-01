@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Company Dashboard</h2>
+
+<h3>Create Drive</h3>
+<form method="post">
+<input name="title" placeholder="Job Title" required><br>
+<textarea name="desc" placeholder="Description" required></textarea><br>
+<button type="submit" style="background:green;color:white;">Create Drive</button>
+</form>
+
+<h3>Your Drives</h3>
+<table border="1">
+<tr><th>ID</th><th>Title</th><th>Action</th></tr>
+{% for d in drives %}
+<tr>
+<td>{{d[0]}}</td>
+<td>{{d[2]}}</td>
+<td>
+    <a href="/delete_drive/{{d[0]}}">Delete</a>
+</td>
+</tr>
+{% endfor %}
+</table>
+
+<a href="/">Logout</a>
+</body>
+</html>
